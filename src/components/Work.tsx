@@ -1,4 +1,4 @@
-﻿import { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
@@ -94,7 +94,10 @@ const Work = () => {
           <div className="carousel-track-container">
             <div className="carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div
+                  className={`carousel-slide ${index === currentIndex ? "carousel-slide-active" : ""}`}
+                  key={index}
+                >
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
