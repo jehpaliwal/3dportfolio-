@@ -16,6 +16,8 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  /* Nudged down from dead-center so the pill clears the marquee; tweak if needed */
+  transform: translateY(clamp(18px, 3.2vh, 38px));
 }
 
 .loading-note {
